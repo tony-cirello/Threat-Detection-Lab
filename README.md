@@ -12,7 +12,7 @@ Pre-requisites:
 2. Connection to SIEM: In my lab, I am ingesting these logs to Microsoft Sentinel. There are a few steps to accomplish this:
    - Install and connect Azure Arc: Since we are using VirtualBox in this case, you need to connect the VMs to Azure with Azure Arc. If you are also using Microsoft Sentinel and don't want to bother with Azure Arc, you would have to create Azure-hosted VMs.
 3. Log Ingestion: Create Data Collection Rules (DCRs) in Azure for the related logging. This will differ slightly on each endpoint, but generally you will need the following DCRs
-   - A Windows Security Event DCR: Installed from Sentinel Content Hub (it's free, don't worry). You should only need the basic events covered; no need for verbose log collection. You will assign the Windows 10 and Windows 2022 machines to this DCR once you've gotten them connected to Azure Arc.
+   - A Windows Security Event DCR: Installed from Sentinel Content Hub (it's free, don't worry). You should only need the Common events covered; no need for verbose log collection. You will assign the Windows 10 and Windows 2022 machines to this DCR once you've gotten them connected to Azure Arc. There is also plenty of room to tweak this in the future.
    - A Syslog via AMA DCR: Another free data connector installed from Sentinel Content Hub. This will be the event collection for your Linux server. You may have to do some tweaking on your local syslog config so it collects everything you need, but the ingestion from the server to Sentinel will be handled by the AMA agent. I would recommend setting this to listen on all log facilities.
    
      You can find some general Microsoft docs to help with steps 2 and 3 above here:
