@@ -69,6 +69,5 @@ Modern detection engineering requires a force-multiplier approach. This reposito
 * **LinkedIn:** (https://www.linkedin.com/in/john-cirello-387311142/)
 
 
-3. **The Workflow Section:** Proves you don't just write queries; it demonstrates you follow a robust, professional software development lifecycle (SDLC) for security operations.
 
 ```
